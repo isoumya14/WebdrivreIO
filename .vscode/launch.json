@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        // {
+        //     "name": "Attach",
+        //     "port": 9229,
+        //     "request": "attach",
+        //     "skipFiles": [
+        //         "<node_internals>/**"
+        //     ],
+        //     "type": "pwa-node"
+        // },
+        // {
+        //     "name": "Launch Program",
+        //     "program": "${workspaceFolder}/app.js",
+        //     "request": "launch",
+        //     "skipFiles": [
+        //         "<node_internals>/**"
+        //     ],
+        //     "type": "pwa-node"
+        // },
+        {
+            "name": "WebDriverIO Test",
+            "type": "node",
+            "request": "launch",
+            "args": ["wdio.conf.js"],
+            "cwd": "${workspaceFolder}",
+            "autoAttachChildProcesses": true,
+            "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+            "console": "integratedTerminal"
+        },
+    ]
+}
